@@ -11,6 +11,7 @@ import { ABOUT_TEXT, DOMAIN_EXPERTISE, COMPOSITION_DATA, DYNAMIC_GALLERY } from 
 import { ShieldCheck, Award } from "lucide-react";
 
 export default function App() {
+
   const [activeSection, setActiveSection] = useState("hero");
   const [galleryFilter, setGalleryFilter] = useState("All");
 
@@ -57,7 +58,7 @@ export default function App() {
       const offset = 80; // Offset for header bar heights
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
-      
+
       window.scrollTo({
         top: offsetPosition,
         behavior: "smooth"
@@ -68,7 +69,7 @@ export default function App() {
 
   return (
     <div className="bg-editorial-bg font-sans text-editorial-ink min-h-screen selection:bg-editorial-accent/25 selection:text-editorial-ink">
-      
+
       {/* Top Floating Header */}
       <Header onScrollTo={handleScrollToSection} activeSection={activeSection} />
 
@@ -78,14 +79,14 @@ export default function App() {
       {/* CORE ABOUT COMPANY PANEL (OCR Page 2 & Page 11 Details) */}
       <section id="about" className="py-24 bg-white text-editorial-ink relative border-b border-editorial-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Visual Box Left (cols: 5) */}
             <div className="lg:col-span-5 relative">
               <div className="absolute -inset-1 bg-editorial-border rounded-xl blur-sm opacity-50" />
               <div className="relative bg-editorial-cream border border-editorial-border rounded-xl overflow-hidden p-6 sm:p-8 space-y-6">
-                
+
                 <h4 className="text-[10px] font-bold text-editorial-accent uppercase tracking-widest">
                   Domain Expertise
                 </h4>
@@ -115,7 +116,7 @@ export default function App() {
 
             {/* Paragraph Text Right (cols: 7) */}
             <div className="lg:col-span-7 space-y-6">
-              
+
               <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-editorial-beige border border-editorial-border text-editorial-accent rounded-full text-[10px] font-bold uppercase tracking-widest">
                 <Award className="w-3.5 h-3.5" />
                 Delhi NCR Standard Class Group
@@ -160,7 +161,7 @@ export default function App() {
       {/* PORTFOLIO TRANSFORMATIONS GALLERY (OCR Page 10) */}
       <section id="gallery" className="py-24 bg-editorial-bg text-editorial-ink border-b border-editorial-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           {/* Title group */}
           <div className="text-center space-y-3 max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl font-serif italic text-editorial-ink font-light">
@@ -180,11 +181,10 @@ export default function App() {
               <button
                 key={gf}
                 onClick={() => setGalleryFilter(gf)}
-                className={`px-3.5 py-1.5 rounded-lg text-[10px] font-extrabold uppercase tracking-widest transition-all cursor-pointer ${
-                  galleryFilter === gf
+                className={`px-3.5 py-1.5 rounded-lg text-[10px] font-extrabold uppercase tracking-widest transition-all cursor-pointer ${galleryFilter === gf
                     ? "bg-editorial-ink text-white font-bold shadow-sm"
                     : "bg-white text-editorial-dark-gray hover:text-editorial-ink border border-editorial-border hover:bg-editorial-cream"
-                }`}
+                  }`}
               >
                 {gf}
               </button>
