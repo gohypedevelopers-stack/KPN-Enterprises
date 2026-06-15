@@ -1,0 +1,6 @@
+{
+  "name": "KPN Enterprises Flooring Solution",
+  "description": "Official corporate portal for KPN Enterprises, containing product details, recommended flooring solutions matrix, interactive AI advisor, and client inquiry systems.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
