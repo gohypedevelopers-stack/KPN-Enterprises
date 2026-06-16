@@ -7,21 +7,53 @@
   --font-mono: "JetBrains Mono", monospace;
 
   /* High-Performance Industrial Flooring Brochure Palette - Updated with user's exact brochure-palette hexes */
-  --color-editorial-bg: #FEFEFE;       /* Crisp pristine pure white (#FEFEFE) */
-  --color-editorial-ink: #050514;      /* High-contrast deep corporate black/midnight (#050514) */
-  --color-editorial-border: #E8EDF5;   /* Structured light steel/blue border lines */
-  --color-editorial-beige: #EEF2FF;    /* Light indigo-blue highlights background */
-  --color-editorial-muted: #6B7280;    /* Clean neutral gray secondary description */
-  --color-editorial-dark-gray: #1F2937;/* Extra legible deep charcoal/black text */
-  --color-editorial-cream: #F8FAFC;    /* Sleek light blue/slate container fill */
-  --color-editorial-accent: #1669D8;   /* High-performance brand light blue (#1669D8) */
-  --color-editorial-purple: #7C3AED;   /* Royal Purple statement fill */
-  --color-editorial-lightblue: #1669D8;/* Vibrant light blue highlighting */
+  --color-editorial-bg: #FEFEFE;
+  /* Crisp pristine pure white (#FEFEFE) */
+  --color-editorial-ink: #050514;
+  /* High-contrast deep corporate black/midnight (#050514) */
+  --color-editorial-border: #E8EDF5;
+  /* Structured light steel/blue border lines */
+  --color-editorial-beige: #EEF2FF;
+  /* Light indigo-blue highlights background */
+  --color-editorial-muted: #6B7280;
+  /* Clean neutral gray secondary description */
+  --color-editorial-dark-gray: #1F2937;
+  /* Extra legible deep charcoal/black text */
+  --color-editorial-cream: #F8FAFC;
+  /* Sleek light blue/slate container fill */
+  --color-editorial-accent: #1669D8;
+  /* High-performance brand light blue (#1669D8) */
+  --color-editorial-lightblue: #1669D8;
+  /* Royal Purple statement fill */
+  --color-editorial-lightblue: #1669D8;
+  /* Vibrant light blue highlighting */
 }
 
+
+
+
 /* Base style resets to match the warm alabaster editorial canvas */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-editorial-bg);
   color: var(--color-editorial-ink);
   font-family: var(--font-sans);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 180s linear infinite;
+  display: flex;
+  width: fit-content;
+}
+
+.hover\:pause-animation:hover .animate-marquee {
+  animation-play-state: paused;
 }

@@ -1,9 +1,9 @@
 import { FlooringProduct, IndustrySector, ClientProfile } from "./types";
 
-export const ABOUT_TEXT = 
+export const ABOUT_TEXT =
   "Delhi's KPN Enterprises has been offering premium industrial epoxy, ESD, PU, and waterproof floor-wall coatings. These long-lasting solutions are resistant to heat, chemicals, bacteria, and slips. We prioritise quality, cost, and timely delivery under the direction of skilled experts. Even the hardest floors in the country are completed flawlessly by our crew using the newest equipment. We collaborate with clients to fulfil particular requirements while guaranteeing quality in each and every project.";
 
-export const DOMAIN_EXPERTISE = 
+export const DOMAIN_EXPERTISE =
   "We offer faultless, prompt solutions because of our vast experience in industrial painting, logistics, and procurement. To ensure quality, our knowledgeable staff uses cutting-edge technology and excellent techniques. Our solid reputation in the Indian market has been established by a committed service culture that guarantees great pleasure through enduring relationships and expert care that satisfies all of our clients' needs.";
 
 export const COMPOSITION_DATA = [
@@ -39,10 +39,7 @@ export const WHY_PARTNER_KPN = [
     title: "Proper On-Site Support",
     description: "Our experts provide direct, hands-on supervision at your location to ensure flawless application and quality control."
   },
-  {
-    title: "Own Transport Facility",
-    description: "Our in-house logistics team guarantees the safe and punctual delivery of all materials to your project site."
-  }
+
 ];
 
 export const INDUSTRIES_SERVED: IndustrySector[] = [
@@ -280,37 +277,37 @@ export const DYNAMIC_GALLERY = [
     title: "Heavy Assembly Bay",
     category: "Epoxy Flooring",
     desc: "A wide forklift hallway with yellow demarcations and super high-gloss reflection.",
-    url: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=600"
+    url: "/gallery/heavy_assembly_bay.png"
   },
   {
     title: "Pharma Cleanroom Corner",
     category: "Coving & Epoxy",
     desc: "Cleanroom corner showcasing self-leveling floors seamless transition to clean vertical walls.",
-    url: "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=600"
+    url: "/gallery/pharma_cleanroom.png"
   },
   {
     title: "Electronics IC Tester Lab",
     category: "Antistatic ESD",
     desc: "Electro-static dissipative blue floor with dynamic copper earthing mesh layout.",
-    url: "https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&q=80&w=600"
+    url: "/gallery/antistatic_esd_lab.png"
   },
   {
     title: "Automotive Press Shop",
     category: "Heavy-Duty Mortar",
     desc: "3mm High-build mortar under giant robotic stamping machines protecting concrete.",
-    url: "https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&q=80&w=600"
+    url: "/gallery/automotive_press_shop.png"
   },
   {
     title: "Chemical Trench Lining",
     category: "Anti-Corrosive Coating",
     desc: "Bright yellow anti-corrosive chemical lining inside industrial acidic channels.",
-    url: "https://images.unsplash.com/photo-1535557142533-b5e1cc6e2a5d?auto=format&fit=crop&q=80&w=600"
+    url: "/gallery/chemical_trench.png"
   },
   {
     title: "Bottling Zone & Drainage",
     category: "PU Screed Flooring",
     desc: "Seamless waterproof red PU flooring resistant to continuous thermal water washdowns.",
-    url: "https://images.unsplash.com/photo-1558443770-fd342377fa1a?auto=format&fit=crop&q=80&w=600"
+    url: "/gallery/red_pu_screed.png"
   }
 ];
 

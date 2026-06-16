@@ -75,21 +75,21 @@ export default function ClientSection() {
   };
 
   const categoriesTabs = [
-    { label: "Durability & Strength", key: "durability" as const, desc: "Extreme point load structures, wear absorption, and aggregate support." },
-    { label: "Aesthetics & Reflection", key: "aesthetics" as const, desc: "Seamless textures, glossy light deflection, and clean layout patterns." },
-    { label: "Hygiene & FDA Compliance", key: "hygiene" as const, desc: "Antimicrobial zero-bacteria transitions compliant with GMP guidelines." },
-    { label: "Smart Value Delivery", key: "performance" as const, desc: "Fast application parameters, minimized downtimes, and active warranties." }
+    { label: "Durability & Strength", key: "durability" as const, desc: "Extreme point load structures, wear absorption, and aggregate support.", imageUrl: "/gallery/epoxy_durability.png" },
+    { label: "Aesthetics & Reflection", key: "aesthetics" as const, desc: "Seamless textures, glossy light deflection, and clean layout patterns.", imageUrl: "/gallery/epoxy_aesthetics.png" },
+    { label: "Hygiene & FDA Compliance", key: "hygiene" as const, desc: "Antimicrobial zero-bacteria transitions compliant with GMP guidelines.", imageUrl: "/gallery/epoxy_hygiene.png" },
+    { label: "Smart Value Delivery", key: "performance" as const, desc: "Fast application parameters, minimized downtimes, and active warranties.", imageUrl: "/gallery/epoxy_smart_value.png" }
   ];
 
   return (
-    <section id="why-epoxy" className="py-24 bg-editorial-cream text-editorial-ink relative border-b border-editorial-border">
+    <section id="why-epoxy" className="py-24 bg-white text-editorial-ink relative border-b border-editorial-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-28">
-        
+
         {/* SECTION 1: INDUSTRIES WE SERVE */}
         <div id="industries" className="space-y-14">
-          
+
           <div className="text-center space-y-3 max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#EEF2FF] border border-editorial-border text-[#7C3AED] rounded-full text-[10px] font-bold uppercase tracking-widest">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#EEF2FF] border border-editorial-border text-[#1669D8] rounded-full text-[10px] font-bold uppercase tracking-widest">
               <Trophy className="w-3.5 h-3.5" />
               Sectors of Expertise
             </div>
@@ -105,22 +105,22 @@ export default function ClientSection() {
             {INDUSTRIES_SERVED.map((ind) => (
               <div
                 key={ind.id}
-                className="bg-white border border-editorial-border hover:border-[#7C3AED]/40 rounded-xl p-6 space-y-4 hover:shadow-md transition-all duration-300 relative group"
+                className="bg-white border border-editorial-border hover:border-[#1669D8]/40 rounded-xl p-6 space-y-4 hover:shadow-md transition-all duration-300 relative group"
               >
                 <div className="flex items-center justify-between">
-                  <div className="w-10 h-10 rounded-lg bg-[#EEF2FF] flex items-center justify-center border border-editorial-border text-[#7C3AED] font-extrabold text-[#7C3AED] text-base select-none">
-                    {ind.iconName === "Apple" && <span className="text-lg">🍎</span>}
-                    {ind.iconName === "Car" && <span className="text-lg">🚗</span>}
-                    {ind.iconName === "Cpu" && <span className="text-lg">💻</span>}
-                    {ind.iconName === "ShoppingBag" && <span className="text-lg">🛒</span>}
-                    {ind.iconName === "Warehouse" && <span className="text-lg">🏢</span>}
-                    {ind.iconName === "Hospital" && <span className="text-lg">🏥</span>}
+                  <div className="w-10 h-10 rounded-lg bg-[#EEF2FF] flex items-center justify-center border border-editorial-border text-[#1669D8] font-extrabold text-[#1669D8] text-base select-none">
+                    {ind.iconName === "Apple" && <i className="bi bi-apple text-[18px]"></i>}
+                    {ind.iconName === "Car" && <i className="bi bi-car-front-fill text-[18px]"></i>}
+                    {ind.iconName === "Cpu" && <i className="bi bi-cpu-fill text-[18px]"></i>}
+                    {ind.iconName === "ShoppingBag" && <i className="bi bi-shop text-[18px]"></i>}
+                    {ind.iconName === "Warehouse" && <i className="bi bi-buildings-fill text-[18px]"></i>}
+                    {ind.iconName === "Hospital" && <i className="bi bi-hospital-fill text-[18px]"></i>}
                   </div>
                   <span className="text-[9px] font-extrabold text-[#1669D8] uppercase tracking-[0.2em] pl-2">KPN Core</span>
                 </div>
 
                 <div className="space-y-1.5">
-                  <h3 className="text-base font-bold text-editorial-ink group-hover:text-[#7C3AED] transition-colors uppercase tracking-tight">
+                  <h3 className="text-base font-bold text-editorial-ink group-hover:text-[#1669D8] transition-colors uppercase tracking-tight">
                     {ind.name}
                   </h3>
                   <p className="text-xs text-editorial-muted leading-relaxed font-semibold">
@@ -144,9 +144,9 @@ export default function ClientSection() {
 
         {/* SECTION 2: WHY CHOOSE EPOXY */}
         <div className="space-y-14">
-          
+
           <div className="text-center space-y-3 max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#EEF2FF] border border-editorial-border text-[#7C3AED] rounded-full text-[10px] font-bold uppercase tracking-widest">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#EEF2FF] border border-editorial-border text-[#1669D8] rounded-full text-[10px] font-bold uppercase tracking-widest">
               <Zap className="w-3.5 h-3.5 animate-pulse text-[#1669D8]" />
               Material Benchmark
             </div>
@@ -159,20 +159,19 @@ export default function ClientSection() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch pt-2">
-            
+
             {/* Category tabs Left */}
             <div className="lg:col-span-4 flex flex-col gap-2.5 justify-center">
               {categoriesTabs.map((ct) => (
                 <button
                   key={ct.key}
                   onClick={() => setActiveAdvantageTab(ct.key)}
-                  className={`text-left p-4 rounded-xl border transition-all duration-300 relative group cursor-pointer ${
-                    activeAdvantageTab === ct.key
-                      ? "bg-black border-black text-white shadow-md scale-[1.01]"
-                      : "bg-white hover:bg-[#EEF2FF]/50 border-editorial-border text-editorial-dark-gray"
-                  }`}
+                  className={`text-left p-4 rounded-xl border transition-all duration-300 relative group cursor-pointer ${activeAdvantageTab === ct.key
+                    ? "bg-black border-black text-white shadow-md scale-[1.01]"
+                    : "bg-white hover:bg-[#EEF2FF]/50 border-editorial-border text-editorial-dark-gray"
+                    }`}
                 >
-                  <div className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${activeAdvantageTab === ct.key ? "text-white" : "text-editorial-ink group-hover:text-[#7C3AED]"}`}>
+                  <div className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${activeAdvantageTab === ct.key ? "text-white" : "text-editorial-ink group-hover:text-[#1669D8]"}`}>
                     {ct.label}
                   </div>
                   <div className={`text-[10px] mt-1 line-clamp-1 font-medium ${activeAdvantageTab === ct.key ? "text-[#EEF2FF]/85" : "text-editorial-muted"}`}>
@@ -183,27 +182,41 @@ export default function ClientSection() {
             </div>
 
             {/* List Right */}
-            <div className="lg:col-span-8 bg-white border border-editorial-border rounded-xl p-6 sm:p-8 shadow-sm flex flex-col justify-center">
-              <div className="space-y-4">
-                <div className="space-y-1">
-                  <h4 className="text-xs font-bold text-black uppercase tracking-widest font-sans">
-                    {categoriesTabs.find((ct) => ct.key === activeAdvantageTab)?.label} Metrics
-                  </h4>
-                  <p className="text-[11px] text-editorial-muted font-semibold leading-relaxed">
-                    Corporate specifications validated and completed during layout executions:
-                  </p>
+            <div className="lg:col-span-8 bg-white border border-editorial-border rounded-xl p-6 shadow-sm overflow-hidden flex flex-col justify-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center h-full">
+
+                {/* Content Side */}
+                <div className="space-y-5 py-2">
+                  <div className="space-y-1.5">
+                    <h4 className="text-sm font-bold text-black uppercase tracking-widest font-sans">
+                      {categoriesTabs.find((ct) => ct.key === activeAdvantageTab)?.label} Metrics
+                    </h4>
+                    <p className="text-xs text-editorial-muted font-semibold leading-relaxed">
+                      Corporate specifications validated and completed during layout executions:
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-3.5 pt-4 border-t border-editorial-border">
+                    {EPOXY_ADVANTAGES[activeAdvantageTab].map((adv, idx) => (
+                      <div key={idx} className="flex items-start gap-3 text-xs text-editorial-dark-gray font-semibold">
+                        <div className="w-5 h-5 rounded-full bg-[#EEF2FF] border border-editorial-border text-[#1669D8] flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">
+                          ✓
+                        </div>
+                        <span className="leading-relaxed">{adv}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-editorial-border">
-                  {EPOXY_ADVANTAGES[activeAdvantageTab].map((adv, idx) => (
-                    <div key={idx} className="flex items-center gap-2.5 text-xs text-editorial-dark-gray font-semibold">
-                      <div className="w-5 h-5 rounded-full bg-[#EEF2FF] border border-editorial-border text-[#7C3AED] flex items-center justify-center font-bold text-[10px]">
-                        ✓
-                      </div>
-                      <span>{adv}</span>
-                    </div>
-                  ))}
+                {/* Image Side */}
+                <div className="w-full h-48 md:h-full min-h-[220px] rounded-lg overflow-hidden relative bg-editorial-bg border border-editorial-border">
+                  <img
+                    src={categoriesTabs.find((ct) => ct.key === activeAdvantageTab)?.imageUrl}
+                    alt={categoriesTabs.find((ct) => ct.key === activeAdvantageTab)?.label}
+                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out"
+                  />
                 </div>
+
               </div>
             </div>
 
@@ -213,7 +226,7 @@ export default function ClientSection() {
 
         {/* SECTION 3: CREDIBILITY */}
         <div className="space-y-12">
-          
+
           <div className="text-center space-y-3 max-w-3xl mx-auto">
             <h2 className="text-2xl sm:text-3xl font-serif italic text-editorial-ink font-light">
               Why Leaders <span className="not-italic font-semibold">Choose KPN</span>
@@ -227,10 +240,10 @@ export default function ClientSection() {
             {WHY_PARTNER_KPN.map((wp, i) => (
               <div
                 key={i}
-                className="bg-white border border-editorial-border hover:bg-[#EEF2FF]/20 p-5 rounded-xl space-y-2 hover:border-[#7C3AED] transition duration-150"
+                className="bg-white border border-editorial-border hover:bg-[#EEF2FF]/20 p-5 rounded-xl space-y-2 hover:border-[#1669D8] transition duration-150"
               >
-                <div className="flex items-center gap-2 text-xs text-[#7C3AED] font-extrabold uppercase tracking-wider">
-                  <ShieldCheck className="w-4 h-4 text-[#7C3AED] shrink-0" />
+                <div className="flex items-center gap-2 text-xs text-[#1669D8] font-extrabold uppercase tracking-wider">
+                  <ShieldCheck className="w-4 h-4 text-[#1669D8] shrink-0" />
                   <span>{wp.title}</span>
                 </div>
                 <p className="text-xs text-editorial-dark-gray font-medium leading-relaxed pl-6">
@@ -242,235 +255,84 @@ export default function ClientSection() {
 
         </div>
 
-        {/* SECTION 4: CLIENT CAROUSEL & LIVE UPLOADER */}
-        <div className="space-y-12">
-          
-          <div className="text-center space-y-3 max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#EEF2FF] border border-editorial-border text-[#7C3AED] rounded-full text-[10px] font-bold uppercase tracking-widest">
-              <Users className="w-3.5 h-3.5 text-[#1669D8]" />
-              Enterprise Carousel
-            </div>
-            <h2 className="text-3xl font-serif italic text-editorial-ink font-light">
-              Esteemed <span className="not-italic font-semibold">Corporate Clients</span>
-            </h2>
-            <p className="text-xs sm:text-sm text-editorial-muted leading-relaxed font-semibold">
-              Review our scrolling corporate portfolio of India's major automakers, labs, pharmacies, and logistic hubs.
-            </p>
+      </div> {/* Close the main max-w-7xl wrapper */}
+
+      {/* SECTION 4: CLIENT CAROUSEL & LIVE UPLOADER (FULL WIDTH EXTRACT) */}
+      <div className="w-full mt-24 mb-0">
+
+        <div className="text-center space-y-3 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#EEF2FF] border border-editorial-border text-[#1669D8] rounded-full text-[10px] font-bold uppercase tracking-widest">
+            <Users className="w-3.5 h-3.5 text-[#1669D8]" />
+            Enterprise Carousel
           </div>
-
-          {/* DYNAMIC SCROLLING CAROUSEL MARQUEE */}
-          <div className="relative w-full overflow-hidden bg-black py-8 rounded-2xl shadow-xl border border-neutral-800">
-            
-            {/* Background Glows */}
-            <div className="absolute top-0 bottom-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-10 pointer-events-none" />
-            <div className="absolute top-0 bottom-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-10 pointer-events-none" />
-
-            <div className="text-center mb-4">
-              <span className="text-[10px] uppercase font-bold tracking-[0.3em] text-[#1669D8] px-3 py-1 rounded bg-[#1669D8]/10 border border-[#1669D8]/25">
-                ✦ LIVE REGISTERED CLIENT FLOW ✦
-              </span>
-            </div>
-
-            {/* Marquee Track */}
-            <div className="flex gap-4 items-center overflow-x-auto no-scrollbar scroll-smooth py-2 px-6">
-              {/* Duplicate contents to allow wide scrolling flow */}
-              {[...dynamicClients, ...dynamicClients].map((client, idx) => {
-                const initials = client.name.split(" ").slice(0, 2).map(n => n[0]).join("").toUpperCase();
-                return (
-                  <div
-                    key={`${client.name}-${idx}`}
-                    className="flex-shrink-0 min-w-[200px] bg-neutral-900 border border-neutral-850 hover:border-[#7C3AED] rounded-xl p-4 flex items-center gap-3 transition-all duration-300 group select-none"
-                  >
-                    {client.logoUrl ? (
-                      <img
-                        src={client.logoUrl}
-                        alt={client.name}
-                        className="w-10 h-10 object-cover rounded-lg border border-neutral-750"
-                        referrerPolicy="no-referrer"
-                      />
-                    ) : (
-                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#7C3AED] to-[#1669D8] text-white flex items-center justify-center font-bold text-xs select-none">
-                        {initials || "KPN"}
-                      </div>
-                    )}
-                    <div className="text-left">
-                      <div className="text-[9px] text-[#1669D8] font-bold uppercase tracking-wider">{client.category}</div>
-                      <div className="text-xs text-white font-semibold uppercase tracking-tight truncate max-w-[140px]">{client.name}</div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            <p className="text-[10px] text-gray-400 text-center mt-3 font-mono">
-              ← Left click and drag or swipe to scroll through our dynamic roster of {dynamicClients.length} verified companies →
-            </p>
-          </div>
-
-          {/* FILTER VIEW & DYNAMIC UPLOADER PORTLET CONTAINER */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-            
-            {/* Filterable Table / List Column (Cols 7) */}
-            <div className="lg:col-span-7 bg-white border border-editorial-border rounded-xl p-6 space-y-6">
-              
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-editorial-border pb-4">
-                <h3 className="text-base font-bold text-black uppercase tracking-tight">
-                  Verify Cooperation Registry
-                </h3>
-                
-                {/* Category selectors */}
-                <select
-                  value={selectedSubSector}
-                  onChange={(e) => setSelectedSubSector(e.target.value)}
-                  className="bg-editorial-cream border border-editorial-border rounded-lg text-xs font-semibold px-3 py-2 text-editorial-ink focus:outline-none focus:ring-1 focus:ring-[#7C3AED]"
-                >
-                  {["Automobiles", "Food, Pharma & Healthcare", "Chemical & Fertilizer", "Auto Engine Parts & Engineering"].map((cat) => (
-                    <option key={cat} value={cat}>{cat}</option>
-                  ))}
-                </select>
-              </div>
-
-              {/* Grid of clients registered in selected tab */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-                {activeClientLogoSet.companies.length > 0 ? (
-                  activeClientLogoSet.companies.map((client, idx) => {
-                    const initials = client.name.split(" ").slice(0, 2).map(n => n[0]).join("").toUpperCase();
-                    return (
-                      <div
-                        key={idx}
-                        className="bg-editorial-cream border border-editorial-border rounded-lg p-3 hover:bg-white hover:border-[#7C3AED] transition-all duration-150 flex items-center gap-2.5"
-                      >
-                        {client.logoUrl ? (
-                          <img src={client.logoUrl} alt={client.name} className="w-8 h-8 rounded object-cover" />
-                        ) : (
-                          <div className="w-8 h-8 rounded bg-[#7C3AED] text-white flex items-center justify-center font-mono font-bold text-[10px]">
-                            {initials || "KP"}
-                          </div>
-                        )}
-                        <div className="text-left text-xs text-editorial-ink font-bold uppercase truncate tracking-tight">
-                          {client.name}
-                        </div>
-                      </div>
-                    );
-                  })
-                ) : (
-                  <div className="col-span-full py-8 text-center text-xs text-editorial-muted">
-                    No custom uploads for this category yet. Upload one below!
-                  </div>
-                )}
-              </div>
-            </div>
-
-            {/* Client Brand Upload Form (Cols 5) */}
-            <div className="lg:col-span-5 bg-white border border-editorial-border rounded-xl p-6 space-y-6">
-              
-              <div className="space-y-1">
-                <span className="text-[10px] font-bold text-[#7C3AED] uppercase tracking-widest block">
-                  Interactive Sandbox Tool
-                </span>
-                <h3 className="text-base font-bold text-black uppercase tracking-tight">
-                  Upload Corporate Partner
-                </h3>
-                <p className="text-xs text-editorial-muted">
-                  Simulate adding your own client's corporate signature or logo to test our live rendering speed.
-                </p>
-              </div>
-
-              <form onSubmit={handleAddClient} className="space-y-4">
-                
-                {/* Company Name */}
-                <div className="space-y-1">
-                  <label className="text-[10px] font-bold uppercase tracking-wider text-editorial-muted">
-                    Company / Organization Name
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="e.g. Maruti Suzuki, Pfizer India, etc."
-                    value={newClientName}
-                    onChange={(e) => setNewClientName(e.target.value)}
-                    className="w-full bg-editorial-cream border border-editorial-border rounded-lg text-xs p-3 text-editorial-ink focus:outline-none focus:ring-1 focus:ring-[#7C3AED]"
-                  />
-                </div>
-
-                {/* Category Selection */}
-                <div className="space-y-1">
-                  <label className="text-[10px] font-bold uppercase tracking-wider text-editorial-muted">
-                    Industrial Sector
-                  </label>
-                  <select
-                    value={newClientCategory}
-                    onChange={(e) => setNewClientCategory(e.target.value)}
-                    className="w-full bg-editorial-cream border border-editorial-border rounded-lg text-xs p-3 text-editorial-ink focus:outline-none focus:ring-1 focus:ring-[#7C3AED]"
-                  >
-                    <option value="Automobiles">Automobiles Sector</option>
-                    <option value="Food, Pharma & Healthcare">Food, Pharma & Healthcare</option>
-                    <option value="Chemical & Fertilizer">Chemical & Fertilizer</option>
-                    <option value="Auto Engine Parts & Engineering">Auto Engineering</option>
-                  </select>
-                </div>
-
-                {/* Logo Image File Picker */}
-                <div className="space-y-1">
-                  <label className="text-[10px] font-bold uppercase tracking-wider text-editorial-muted block">
-                    Upload Company Icon / Logo (Optional)
-                  </label>
-                  
-                  <div className="flex items-center gap-3">
-                    <button
-                      type="button"
-                      onClick={() => fileInputRef.current?.click()}
-                      className="flex items-center gap-2 bg-editorial-cream hover:bg-[#EEF2FF] text-xs font-semibold px-4 py-2.5 rounded-lg border border-editorial-border text-editorial-ink cursor-pointer"
-                    >
-                      <Upload className="w-4 h-4 text-[#7C3AED]" />
-                      Browse Image...
-                    </button>
-                    
-                    <input
-                      type="file"
-                      ref={fileInputRef}
-                      accept="image/*"
-                      onChange={handleLogoFileChange}
-                      className="hidden"
-                    />
-
-                    {newClientLogoUrl ? (
-                      <div className="flex items-center gap-1.5 bg-[#EEF2FF] text-[#7C3AED] px-2.5 py-1 text-[11px] font-bold rounded">
-                        <ImageIcon className="w-3.5 h-3.5" />
-                        <span>Ready</span>
-                      </div>
-                    ) : (
-                      <span className="text-[10px] text-editorial-muted italic">Defaulting to color initials</span>
-                    )}
-                  </div>
-                </div>
-
-                {/* Success Alert */}
-                {uploadSuccess && (
-                  <div className="flex items-center gap-2 text-xs bg-emerald-50 text-emerald-800 p-3 rounded-lg border border-emerald-200">
-                    <Check className="w-4 h-4 text-emerald-600 shrink-0" />
-                    <span>Success! Appended instantly to scrolling flow.</span>
-                  </div>
-                )}
-
-                {/* CTA Submit Button */}
-                <button
-                  type="submit"
-                  className="w-full flex items-center justify-center gap-2 bg-black hover:bg-[#7C3AED] text-white font-bold py-3 px-5 rounded-lg text-xs uppercase tracking-widest transition-all duration-300 active:scale-[0.98] cursor-pointer"
-                >
-                  <Plus className="w-4 h-4" />
-                  Append to Carousel
-                </button>
-
-              </form>
-
-            </div>
-
-          </div>
-
+          <h2 className="text-3xl font-serif italic text-editorial-ink font-light">
+            Esteemed <span className="not-italic font-semibold">Corporate Clients</span>
+          </h2>
+          <p className="text-xs sm:text-sm text-editorial-muted leading-relaxed font-semibold">
+            Review our scrolling corporate portfolio of India's major automakers, labs, pharmacies, and logistic hubs.
+          </p>
         </div>
 
+        {/* DYNAMIC SCROLLING CAROUSEL MARQUEE - FULL WIDTH */}
+        <div className="relative w-full overflow-hidden bg-white py-8 mt-12 hover:pause-animation group cursor-default">
+
+          {/* Background Glows */}
+          <div className="absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none" />
+          <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none" />
+
+          {/* Marquee Track */}
+          <div className="animate-marquee flex gap-4 items-center pl-4 w-max">
+            {/* Duplicate contents heavily to allow smooth continuous flow on ultra-wide screens */}
+            {[...dynamicClients, ...dynamicClients, ...dynamicClients, ...dynamicClients].map((client, idx) => {
+              const initials = client.name.split(" ").slice(0, 2).map(n => n[0]).join("").toUpperCase();
+
+              // Hardcoded reliable image URLs for major brands
+              const KNOWN_LOGOS: Record<string, string> = {
+                "Honda": "https://cdn.worldvectorlogo.com/logos/honda-2.svg",
+                "Toyota": "https://cdn.worldvectorlogo.com/logos/toyota.svg",
+                "Tata Motors": "https://cdn.worldvectorlogo.com/logos/tata.svg",
+                "Mahindra": "https://cdn.worldvectorlogo.com/logos/mahindra.svg",
+                "Suzuki": "https://cdn.worldvectorlogo.com/logos/suzuki.svg",
+                "Hyundai": "https://cdn.worldvectorlogo.com/logos/hyundai.svg",
+                "Hero": "https://cdn.worldvectorlogo.com/logos/hero-1.svg",
+                "Eicher": "https://cdn.worldvectorlogo.com/logos/eicher-1.svg",
+                "Hindustan Unilever Limited": "https://cdn.worldvectorlogo.com/logos/unilever-1.svg",
+                "Cipla": "https://cdn.worldvectorlogo.com/logos/cipla.svg",
+                "Patanjali": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Patanjali_Ayurved_logo.svg"
+              };
+
+              const tryUrl = client.logoUrl || KNOWN_LOGOS[client.name] || `https://logo.clearbit.com/${client.name.toLowerCase().replace(/[^a-z0-9]/g, '')}.com`;
+
+              return (
+                <div
+                  key={`${client.name}-${idx}`}
+                  className="flex-shrink-0 w-[300px] h-[150px] flex items-center justify-center transition-all duration-300 select-none px-6 group-hover/card:opacity-100"
+                >
+                  <img
+                    src={tryUrl}
+                    alt={client.name}
+                    className="max-w-[240px] max-h-[100px] object-contain transition-transform duration-300 hover:scale-105"
+                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                    }}
+                  />
+                  <div className="hidden text-2xl font-black text-editorial-muted tracking-tighter opacity-50 select-none text-center leading-tight">
+                    {client.name.toUpperCase()}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <p className="text-[10px] text-editorial-muted text-center mt-6 font-mono relative z-20 transition-opacity opacity-50 group-hover:opacity-100">
+            Hover to pause scrolling
+          </p>
+        </div>
       </div>
+
+
     </section>
   );
 }

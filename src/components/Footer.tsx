@@ -15,18 +15,12 @@ export default function Footer() {
         
         {/* Left Column (Brand info): cols: 4 */}
         <div className="md:col-span-4 space-y-4">
-          <div className="flex items-center gap-2.5">
-            <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center font-serif font-light italic text-editorial-ink text-base">
-              K
-            </div>
-            <div>
-              <span className="text-base font-bold tracking-tighter uppercase block">
-                KPN <span className="font-light text-editorial-cream text-xs">Enterprises</span>
-              </span>
-              <span className="text-[9px] text-[#FAF9F6]/60 tracking-[4px] uppercase font-bold leading-none block">
-                Industrial Floors
-              </span>
-            </div>
+          <div className="flex items-center">
+            <img 
+              src="/ChatGPT_Image_Jun_16__2026__03_26_32_PM-removebg-preview.png" 
+              alt="KPN Enterprises" 
+              className="h-16 w-auto object-contain brightness-0 invert"
+            />
           </div>
           
           <p className="text-xs text-[#FAF9F6]/75 leading-relaxed max-w-sm font-medium">
