@@ -5,7 +5,7 @@ import { PRODUCT_CATALOG } from "../data";
 const placeholderImages = [
   "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&q=80&w=800", // Epoxy
   "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800", // PU
-  "https://images.unsplash.com/photo-1565624795393-2cebd59e4bb7?auto=format&fit=crop&q=80&w=800", // Anti-slip
+  "/gallery/seamless_coving.png", // Custom Coving Image
   "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800", // ESD
   "https://images.unsplash.com/photo-1580983546595-dfb1df0fec9d?auto=format&fit=crop&q=80&w=800", // Coving
   "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=800", // Marking
