@@ -1,6 +1,5 @@
 import React from "react";
-import { Check, Award, Users, Target, ArrowRight } from "lucide-react";
-import { ABOUT_TEXT, DOMAIN_EXPERTISE, COMPOSITION_DATA, WHY_PARTNER_KPN, REPRESENTATIVE_CONTACT } from "../data";
+import { ArrowRight, Cog, Zap, Users } from "lucide-react";
 import { FadeIn } from "../components/ui/FadeIn";
 import { Link } from "react-router-dom";
 import PageHero from "../components/PageHero";
@@ -14,144 +13,182 @@ export default function AboutPage() {
         imageSrc="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=2000"
       />
 
-
-      {/* Core Company Story */}
-      {/* CORE ABOUT COMPANY PANEL */}
+      {/* 1. Our Story */}
       <FadeIn direction="up">
-        <section id="about" className="py-24 bg-white text-editorial-ink relative border-b border-editorial-border">
-          <div className="w-full px-4 sm:px-8 lg:px-16 2xl:px-24 space-y-24">
-            {/* Top Block: Image Left, Text Right */}
+        <section id="story" className="py-24 bg-white text-editorial-ink relative border-b border-editorial-border">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               {/* Left Image */}
               <div className="relative overflow-hidden h-[400px] lg:h-[500px] rounded-2xl shadow-sm">
                 <img
                   src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&q=80&w=800"
-                  alt="Professional facility"
+                  alt="Industrial Flooring Construction"
                   className="w-full h-full object-cover"
                 />
+                <div className="absolute inset-0 bg-editorial-ink/10" />
               </div>
 
               {/* Right Text */}
               <div className="space-y-6">
-                <div className="text-sm font-bold text-editorial-accent uppercase tracking-widest">
-                  Delhi NCR Standard Class Group
+                <div className="text-xs font-bold text-[#1669D8] uppercase tracking-[0.25em]">
+                  Part 01
                 </div>
                 <h2 className="text-4xl sm:text-5xl font-serif italic text-editorial-ink font-light">
-                  About <span className="not-italic font-semibold">KPN Enterprises</span>
+                  Our <span className="not-italic font-semibold">Story</span>
                 </h2>
-                <div className="font-bold text-sm sm:text-base text-gray-800">
-                  Resistant to heat, organic acids, bacteria, and slips. Prioritize high durability, strict costings, and timely execution.
-                </div>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  {ABOUT_TEXT}
+                <div className="w-12 h-1 bg-[#1669D8]" />
+                <p className="text-sm sm:text-base text-editorial-dark-gray leading-relaxed font-semibold">
+                  Delhi's KPN Enterprises has been offering premium industrial epoxy, ESD, PU, and waterproof floor-wall coatings. These long-lasting solutions are resistant to heat, chemicals, bacteria, and slips.
                 </p>
-
-                <Link
-                  to="/contact"
-                  className="inline-flex bg-[#1669D8] hover:bg-blue-700 text-white font-bold py-3 px-6 rounded items-center justify-center gap-2 uppercase text-xs tracking-wider transition-colors mt-8"
-                >
-                  Get a Quote
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+                <p className="text-sm sm:text-base text-editorial-dark-gray leading-relaxed font-medium">
+                  We prioritise quality, cost, and timely delivery under the direction of skilled experts. Even the hardest floors in the country are completed flawlessly by our crew using the newest equipment. We collaborate with clients to fulfil particular requirements while guaranteeing quality in each and every project.
+                </p>
               </div>
             </div>
+          </div>
+        </section>
+      </FadeIn>
 
-            {/* Bottom Block: Text Left, Image Right */}
+      {/* 2. Journey */}
+      <FadeIn direction="up" delay={0.1}>
+        <section id="journey" className="py-24 bg-editorial-bg text-editorial-ink relative border-b border-editorial-border">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-
+              
               {/* Left Text */}
-              <div className="space-y-8 lg:pr-8">
+              <div className="space-y-6 lg:pr-8 order-2 lg:order-1">
+                <div className="text-xs font-bold text-[#1669D8] uppercase tracking-[0.25em]">
+                  Part 02
+                </div>
                 <h2 className="text-4xl sm:text-5xl font-serif italic text-editorial-ink font-light">
-                  Domain <span className="not-italic font-semibold">Expertise</span>
+                  Our <span className="not-italic font-semibold">Journey</span>
                 </h2>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  {DOMAIN_EXPERTISE}
+                <div className="w-12 h-1 bg-[#1669D8]" />
+                <p className="text-sm sm:text-base text-editorial-dark-gray leading-relaxed font-semibold">
+                  We offer faultless, prompt solutions because of our vast experience in industrial painting, logistics, and procurement.
                 </p>
-
-                <ul className="space-y-4 pt-2">
-                  {COMPOSITION_DATA.map((role, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-gray-800 shrink-0 mt-0.5" />
-                      <span className="text-sm font-medium text-gray-700">{role}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-sm sm:text-base text-editorial-dark-gray leading-relaxed font-medium">
+                  To ensure quality, our knowledgeable staff uses cutting-edge technology and excellent techniques. Our solid reputation in the Indian market has been established by a committed service culture that guarantees great pleasure through enduring relationships and expert care that satisfies all of our clients' needs.
+                </p>
+                <p className="text-sm sm:text-base text-editorial-dark-gray leading-relaxed font-medium">
+                  From industrial warehouses to designer showrooms, we've established a reputation for reliability, excellence, and long-lasting, gorgeous finishes.
+                </p>
               </div>
 
               {/* Right Image */}
-              <div className="relative overflow-hidden h-[400px] lg:h-[500px] rounded-2xl shadow-sm">
+              <div className="relative overflow-hidden h-[400px] lg:h-[500px] rounded-2xl shadow-sm order-1 lg:order-2">
                 <img
                   src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=800"
-                  alt="Domain expertise"
+                  alt="Corporate layout"
                   className="w-full h-full object-cover"
                 />
+                <div className="absolute inset-0 bg-editorial-ink/10" />
               </div>
+
             </div>
           </div>
         </section>
       </FadeIn>
 
-
-      {/* Company Values */}
+      {/* 3. What Sets Us Apart */}
       <FadeIn direction="up" delay={0.1}>
-        <section className="py-24 bg-editorial-ink text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+        <section id="edge" className="py-24 bg-white text-editorial-ink relative border-b border-editorial-border">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+            
+            <div className="text-center space-y-4 max-w-3xl mx-auto">
+              <div className="text-xs font-bold text-[#1669D8] uppercase tracking-[0.25em]">
+                Part 03
+              </div>
+              <h2 className="text-4xl sm:text-5xl font-serif italic text-editorial-ink font-light">
+                What Sets <span className="not-italic font-semibold">Us Apart</span>
+              </h2>
+              <div className="w-12 h-1 bg-[#1669D8] mx-auto" />
+              <p className="text-sm sm:text-base text-editorial-dark-gray leading-relaxed pt-2">
+                <strong>OUR EDGE: EXPERTISE, INNOVATION & COMMITMENT.</strong><br/>
+                Our dominance stems from a potent combination of foresight, deep customer understanding, and continuous innovation.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { icon: Award, label: "Quality First", desc: "Uncompromising standards in every project" },
-                { icon: Target, label: "On-Time Delivery", desc: "Strict scheduling for minimal downtime" },
-                { icon: Users, label: "Expert Team", desc: "Skilled professionals with proven track record" },
-                { icon: Check, label: "Customer Focus", desc: "Transparent communication and support" }
-              ].map((value, idx) => {
-                const Icon = value.icon;
+                { 
+                  icon: Users, 
+                  title: "Skilled Employees", 
+                  desc: "200+ dedicated professionals with technical qualifications and customer focus." 
+                },
+                { 
+                  icon: Cog, 
+                  title: "Total Solution Approach", 
+                  desc: "From manufacturing to troubleshooting, our experience ensures a complete solution." 
+                },
+                { 
+                  icon: Zap, 
+                  title: "Value-Added Services", 
+                  desc: "High-tech solutions in quality, cost, and time, leveraging global best practices." 
+                }
+              ].map((adv, idx) => {
+                const Icon = adv.icon;
                 return (
-                  <div key={idx} className="space-y-4">
-                    <Icon className="w-12 h-12 mx-auto text-editorial-accent" />
-                    <h3 className="font-bold text-lg">{value.label}</h3>
-                    <p className="text-sm text-gray-300">{value.desc}</p>
+                  <div key={idx} className="bg-editorial-bg border border-editorial-border rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group text-center md:text-left flex flex-col items-center md:items-start">
+                    <div className="w-14 h-14 bg-white border border-editorial-border text-[#1669D8] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-xl font-bold text-editorial-ink mb-3">{adv.title}</h3>
+                    <p className="text-sm text-editorial-dark-gray leading-relaxed font-medium">
+                      {adv.desc}
+                    </p>
                   </div>
-                );
+                )
               })}
             </div>
+
           </div>
         </section>
       </FadeIn>
 
-
-
-      {/* Why Partner With KPN */}
+      {/* 4. Vision */}
       <FadeIn direction="up" delay={0.1}>
-        <section className="py-24 bg-white border-b border-editorial-border">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center space-y-4 mb-16">
-              <h2 className="text-4xl font-serif italic text-editorial-ink font-light">
-                Why Partner With <span className="not-italic font-semibold">KPN Enterprises</span>
-              </h2>
-              <p className="text-editorial-dark-gray max-w-2xl mx-auto">We deliver comprehensive industrial flooring solutions backed by expertise and dedication</p>
-            </div>
+        <section id="vision" className="relative py-32 bg-[#0a2537] text-white overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=2000" 
+              alt="Industrial Vision" 
+              className="w-full h-full object-cover opacity-10"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0a2537]/80 to-transparent" />
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {WHY_PARTNER_KPN.map((reason, idx) => (
-                <div
-                  key={idx}
-                  className="bg-editorial-bg rounded-xl p-8 border border-editorial-border hover:shadow-lg transition-shadow"
-                >
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 bg-editorial-ink rounded-lg flex items-center justify-center text-white font-bold flex-shrink-0">
-                      {idx + 1}
-                    </div>
-                  </div>
-                  <h3 className="text-lg font-bold text-editorial-ink mb-3">{reason.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">{reason.description}</p>
-                </div>
-              ))}
+          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+            <div className="text-xs font-bold text-editorial-accent uppercase tracking-[0.25em]">
+              Part 04
+            </div>
+            <h2 className="text-5xl sm:text-6xl font-serif italic text-white font-light">
+              Our <span className="not-italic font-semibold">Vision</span>
+            </h2>
+            <div className="w-16 h-1 bg-editorial-accent mx-auto" />
+            <p className="text-lg sm:text-xl text-gray-200 leading-relaxed font-semibold max-w-3xl mx-auto pt-2">
+              "Customer satisfaction is our passion."
+            </p>
+            <p className="text-sm sm:text-base text-gray-300 leading-relaxed max-w-3xl mx-auto font-medium">
+              We increase Asset Utilisation & Aesthetics, Cost Avoidance & Reduction, Superior Quality & Advanced Technology, and Exceptional Applicators & Supervisors through a potent combination of high-quality application and cutting-edge technology.
+            </p>
+            <p className="text-lg sm:text-xl text-white leading-relaxed font-serif italic max-w-3xl mx-auto pt-4">
+              Together, we can create a floor that will enhance your area and endure.
+            </p>
+
+            <div className="pt-10">
+              <Link
+                to="/contact"
+                className="inline-flex bg-[#1669D8] hover:bg-blue-700 text-white font-bold py-4 px-8 rounded items-center justify-center gap-2 uppercase text-sm tracking-widest transition-all hover:scale-105 shadow-xl"
+              >
+                Discuss Your Project
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
           </div>
         </section>
       </FadeIn>
-
-
-
 
     </>
   );
