@@ -101,14 +101,14 @@ export default function ClientSection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 pb-4 -mx-4 px-4 md:mx-0 md:px-0 hide-scrollbar">
             {INDUSTRIES_SERVED.map((ind) => (
               <div
                 key={ind.id}
-                className="bg-white border border-editorial-border hover:border-[#1669D8]/40 rounded-xl p-6 space-y-4 hover:shadow-md transition-all duration-300 relative group"
+                className="w-[160px] md:w-auto flex-none snap-start bg-white border border-editorial-border hover:border-[#1669D8]/40 rounded-xl p-4 md:p-6 space-y-3 md:space-y-4 hover:shadow-md transition-all duration-300 relative group flex flex-col md:block items-center text-center md:text-left"
               >
-                <div className="flex items-center justify-between">
-                  <div className="w-10 h-10 rounded-lg bg-[#EEF2FF] flex items-center justify-center border border-editorial-border text-[#1669D8] font-extrabold text-[#1669D8] text-base select-none">
+                <div className="flex flex-col md:flex-row items-center justify-between w-full">
+                  <div className="w-10 h-10 md:w-10 md:h-10 rounded-lg bg-[#EEF2FF] flex items-center justify-center border border-editorial-border text-[#1669D8] font-extrabold text-base select-none mx-auto md:mx-0">
                     {ind.iconName === "Apple" && <i className="bi bi-apple text-[18px]"></i>}
                     {ind.iconName === "Car" && <i className="bi bi-car-front-fill text-[18px]"></i>}
                     {ind.iconName === "Cpu" && <i className="bi bi-cpu-fill text-[18px]"></i>}
@@ -116,19 +116,19 @@ export default function ClientSection() {
                     {ind.iconName === "Warehouse" && <i className="bi bi-buildings-fill text-[18px]"></i>}
                     {ind.iconName === "Hospital" && <i className="bi bi-hospital-fill text-[18px]"></i>}
                   </div>
-                  <span className="text-[9px] font-extrabold text-[#1669D8] uppercase tracking-[0.2em] pl-2">KPN Core</span>
+                  <span className="hidden md:inline-block text-[9px] font-extrabold text-[#1669D8] uppercase tracking-[0.2em] pl-2">KPN Core</span>
                 </div>
 
-                <div className="space-y-1.5">
-                  <h3 className="text-base font-bold text-editorial-ink group-hover:text-[#1669D8] transition-colors uppercase tracking-tight">
+                <div className="space-y-1.5 flex-1 flex flex-col justify-center w-full">
+                  <h3 className="text-[11px] md:text-base font-bold text-editorial-ink group-hover:text-[#1669D8] transition-colors uppercase tracking-tight leading-snug">
                     {ind.name}
                   </h3>
-                  <p className="text-xs text-editorial-muted leading-relaxed font-semibold">
+                  <p className="hidden md:block text-xs text-editorial-muted leading-relaxed font-semibold">
                     {ind.description}
                   </p>
                 </div>
 
-                <ul className="space-y-2 pt-3.5 border-t border-editorial-border">
+                <ul className="hidden md:block space-y-2 pt-3.5 border-t border-editorial-border">
                   {ind.requirements.map((req, rid) => (
                     <li key={rid} className="flex items-center gap-2.5 text-[11px] text-editorial-dark-gray font-semibold">
                       <span className="w-1.5 h-1.5 bg-[#1669D8] rounded-full shrink-0" />
@@ -163,27 +163,69 @@ export default function ClientSection() {
             {/* Category tabs Left */}
             <div className="lg:col-span-4 flex flex-col gap-2.5 justify-center">
               {categoriesTabs.map((ct) => (
-                <button
-                  key={ct.key}
-                  onClick={() => setActiveAdvantageTab(ct.key)}
-                  className={`text-left p-4 rounded-xl border transition-all duration-300 relative group cursor-pointer ${activeAdvantageTab === ct.key
-                    ? "bg-black border-black text-white shadow-md scale-[1.01]"
-                    : "bg-white hover:bg-[#EEF2FF]/50 border-editorial-border text-editorial-dark-gray"
+                <div key={ct.key} className="flex flex-col">
+                  <button
+                    onClick={() => setActiveAdvantageTab(ct.key)}
+                    className={`text-left p-4 rounded-xl border transition-all duration-300 relative group cursor-pointer ${activeAdvantageTab === ct.key
+                      ? "bg-black border-black text-white shadow-md scale-[1.01]"
+                      : "bg-white hover:bg-[#EEF2FF]/50 border-editorial-border text-editorial-dark-gray"
+                      }`}
+                  >
+                    <div className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${activeAdvantageTab === ct.key ? "text-white" : "text-editorial-ink group-hover:text-[#1669D8]"}`}>
+                      {ct.label}
+                    </div>
+                    <div className={`text-[10px] mt-1 line-clamp-1 font-medium ${activeAdvantageTab === ct.key ? "text-[#EEF2FF]/85" : "text-editorial-muted"}`}>
+                      {ct.desc}
+                    </div>
+                  </button>
+
+                  {/* Mobile Accordion Dropdown */}
+                  <div 
+                    className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${
+                      activeAdvantageTab === ct.key ? 'max-h-[800px] opacity-100 mt-2.5 mb-1.5' : 'max-h-0 opacity-0 m-0'
                     }`}
-                >
-                  <div className={`text-xs sm:text-sm font-bold uppercase tracking-wider ${activeAdvantageTab === ct.key ? "text-white" : "text-editorial-ink group-hover:text-[#1669D8]"}`}>
-                    {ct.label}
+                  >
+                    <div className="bg-white border border-editorial-border rounded-xl p-5 shadow-sm flex flex-col gap-6">
+                      
+                      <div className="space-y-4">
+                        <div className="space-y-1">
+                          <h4 className="text-xs font-bold text-black uppercase tracking-widest font-sans">
+                            {ct.label} Metrics
+                          </h4>
+                          <p className="text-[11px] text-editorial-muted font-semibold leading-relaxed">
+                            Corporate specifications validated and completed during layout executions:
+                          </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 gap-3 pt-3 border-t border-editorial-border">
+                          {EPOXY_ADVANTAGES[ct.key].map((adv, idx) => (
+                            <div key={idx} className="flex items-start gap-3 text-[11px] text-editorial-dark-gray font-semibold">
+                              <div className="w-4 h-4 rounded-full bg-[#EEF2FF] border border-editorial-border text-[#1669D8] flex items-center justify-center font-bold text-[9px] shrink-0 mt-0.5">
+                                ✓
+                              </div>
+                              <span className="leading-relaxed">{adv}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div className="w-full h-40 rounded-lg overflow-hidden relative bg-editorial-bg border border-editorial-border">
+                        <img
+                          src={ct.imageUrl}
+                          alt={ct.label}
+                          className="absolute inset-0 w-full h-full object-cover"
+                        />
+                      </div>
+
+                    </div>
                   </div>
-                  <div className={`text-[10px] mt-1 line-clamp-1 font-medium ${activeAdvantageTab === ct.key ? "text-[#EEF2FF]/85" : "text-editorial-muted"}`}>
-                    {ct.desc}
-                  </div>
-                </button>
+                </div>
               ))}
             </div>
 
-            {/* List Right */}
-            <div className="lg:col-span-8 bg-white border border-editorial-border rounded-xl p-6 shadow-sm overflow-hidden flex flex-col justify-center">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center h-full">
+            {/* List Right (Desktop Only) */}
+            <div className="hidden lg:flex lg:col-span-8 bg-white border border-editorial-border rounded-xl p-6 shadow-sm overflow-hidden flex-col justify-center">
+              <div className="grid grid-cols-2 gap-8 items-center h-full">
 
                 {/* Content Side */}
                 <div className="space-y-5 py-2">
