@@ -17,11 +17,11 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { name: "Home", path: "#hero" },
-    { name: "About", path: "#about" },
-    { name: "Services", path: "#products" },
-    { name: "Portfolio", path: "#gallery" },
-    { name: "Contact", path: "#get-quote" }
+    { name: "Home", path: "/", anchor: "#hero" },
+    { name: "About", path: "/about", anchor: "#about" },
+    { name: "Services", path: "/services", anchor: "#products" },
+    { name: "Portfolio", path: "/portfolio", anchor: "#gallery" },
+    { name: "Contact", path: "/contact", anchor: "#get-quote" }
   ];
 
   const handleNavClick = () => {
@@ -58,11 +58,12 @@ export default function Header() {
           {/* Desktop Center Section: Navigation Links */}
           <nav className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-8 lg:gap-12 z-10">
             {navItems.map((item) => {
-              const isActive = false; // Simplified for now since we are scrolling on the same page
+              const isActive = pathname === item.path;
               return (
-                <a
-                  key={item.path}
-                  href={item.path}
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  onClick={handleNavClick}
                   className={`text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.2em] transition-all pb-1 ${
                     isActive
                       ? "text-blue-500 border-b-[1.5px] border-blue-500"
@@ -72,7 +73,7 @@ export default function Header() {
                   }`}
                 >
                   {item.name}
-                </a>
+                </Link>
               );
             })}
           </nav>
@@ -88,15 +89,15 @@ export default function Header() {
               </span>
             </div>
 
-            <a
-              href="#get-quote"
+            <Link
+              to="/contact"
               className={`font-bold py-3.5 px-8 text-[10px] uppercase tracking-[0.25em] transition-all active:scale-95 shadow-sm whitespace-nowrap ${scrolled
                   ? "bg-editorial-ink hover:bg-editorial-accent text-white"
                   : "bg-white hover:bg-gray-100 text-black"
                 }`}
             >
               Request Quote
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Trigger */}
@@ -117,19 +118,23 @@ export default function Header() {
       {/* Mobile Drawer Menu */}
       {isOpen && (
         <div className="md:hidden bg-editorial-bg border-b border-editorial-border p-4 space-y-2 shadow-lg">
-          {navItems.map((item) => (
-            <a
-              key={item.path}
-              href={item.path}
-              onClick={handleNavClick}
-              className={`block w-full text-left px-4 py-3 rounded-lg text-xs font-bold uppercase tracking-wider transition-all ${false // No active state for hash links
-                ? "bg-editorial-beige text-editorial-ink border-l-4 border-editorial-accent"
-                : "text-editorial-dark-gray hover:text-editorial-ink hover:bg-editorial-beige/50"
-                }`}
-            >
-              {item.name}
-            </a>
-          ))}
+          {navItems.map((item) => {
+            const isActive = pathname === item.path;
+            return (
+              <Link
+                key={item.name}
+                to={item.path}
+                onClick={handleNavClick}
+                className={`block w-full text-left px-4 py-3 rounded-lg text-xs font-bold uppercase tracking-wider transition-all ${
+                  isActive
+                    ? "bg-editorial-beige text-editorial-ink border-l-4 border-editorial-accent"
+                    : "text-editorial-dark-gray hover:text-editorial-ink hover:bg-editorial-beige/50"
+                  }`}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
           <div className="pt-4 flex flex-col gap-2">
             <a
               href={`tel:${REPRESENTATIVE_CONTACT.phones[0]}`}
@@ -138,14 +143,14 @@ export default function Header() {
               <Phone className="w-4 h-4" />
               Call +91 93183 51774
             </a>
-            <a
-              href="#get-quote"
+            <Link
+              to="/contact"
               onClick={handleNavClick}
               className="flex items-center justify-center gap-2 bg-editorial-beige hover:bg-editorial-border/60 text-editorial-ink border border-editorial-border font-bold py-3 px-4 rounded-full text-xs uppercase tracking-widest transition"
             >
               Consult Free
               <ArrowRight className="w-4 h-4 text-editorial-accent" />
-            </a>
+            </Link>
           </div>
         </div>
       )}
