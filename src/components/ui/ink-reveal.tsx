@@ -249,6 +249,12 @@ export default function InkReveal({
     return { x: e.clientX - rect.left, y: e.clientY - rect.top };
   };
 
+  const getTouchRelativePos = (e: React.TouchEvent<HTMLCanvasElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const touch = e.touches[0];
+    return { x: touch.clientX - rect.left, y: touch.clientY - rect.top };
+  };
+
   return (
     <canvas
       ref={canvasRef}
@@ -272,6 +278,23 @@ export default function InkReveal({
         startLoop();
       }}
       onMouseLeave={() => {
+        lastPosRef.current = null;
+      }}
+      onTouchStart={(e) => {
+        const pos = getTouchRelativePos(e);
+        lastPosRef.current = pos;
+        stampAlong(pos.x, pos.y);
+        startLoop();
+      }}
+      onTouchMove={(e) => {
+        const pos = getTouchRelativePos(e);
+        stampAlong(pos.x, pos.y);
+        startLoop();
+      }}
+      onTouchEnd={() => {
+        lastPosRef.current = null;
+      }}
+      onTouchCancel={() => {
         lastPosRef.current = null;
       }}
     />

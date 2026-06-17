@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight, MessageSquareCode, Award, ShieldCheck, Sparkles } from "lucide-react";
 
+import ImageComparison from "./ui/image-comparison";
 import InkReveal from "./ui/ink-reveal";
 
 interface HeroProps {
@@ -11,25 +12,33 @@ export default function Hero({ onScrollTo }: HeroProps) {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-16 border-b border-editorial-border"
+      className="relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden pt-28 pb-16 border-b border-editorial-border"
     >
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0">
-        {/* Layer 0: After image (Revealed) */}
-        <img
-          src="/after_flooring.png"
-          alt="Premium Epoxy Industrial Floor After"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
         
-        {/* Layer 1: InkReveal canvas. Draws the "Before" image and erases it to reveal the "After" image below. */}
-        <InkReveal 
-          imageSrc="/before_flooring.png"
-          brushSize={250}
-        />
+        {/* Mobile View: Image Comparison Slider */}
+        <div className="md:hidden absolute inset-0">
+          <ImageComparison 
+            beforeImage="/before_flooring.png"
+            afterImage="/after_flooring.png"
+          />
+        </div>
 
-        {/* Full-screen dark overlay for text contrast (pointer-events-none allows mouse to interact with canvas) */}
-        <div className="absolute inset-0 bg-black/50 z-10 pointer-events-none" />
+        {/* Desktop View: Ink Reveal Effect */}
+        <div className="hidden md:block absolute inset-0">
+          <img
+            src="/after_flooring.png"
+            alt="Premium Epoxy Industrial Floor After"
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+          <InkReveal 
+            imageSrc="/before_flooring.png"
+            brushSize={250}
+          />
+          <div className="absolute inset-0 bg-black/50 pointer-events-none" />
+        </div>
+        
       </div>
 
       {/* Content Wrapper - Left Aligned to match new reference */}
