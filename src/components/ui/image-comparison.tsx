@@ -8,28 +8,28 @@ interface ImageComparisonProps {
 
 export default function ImageComparison({ beforeImage, afterImage }: ImageComparisonProps) {
   const [position, setPosition] = useState(50);
-  const [isDragging, setIsDragging] = useState(false);
+  const isDraggingRef = useRef(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleMove = useCallback(
     (clientX: number) => {
-      if (!containerRef.current || !isDragging) return;
+      if (!containerRef.current || !isDraggingRef.current) return;
       const rect = containerRef.current.getBoundingClientRect();
       const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
       const percent = (x / rect.width) * 100;
       setPosition(percent);
     },
-    [isDragging]
+    []
   );
 
   return (
     <div
       ref={containerRef}
-      className="absolute inset-0 w-full h-full select-none overflow-hidden touch-none"
+      className="absolute inset-0 w-full h-full select-none overflow-hidden touch-pan-y"
       onMouseMove={(e) => handleMove(e.clientX)}
       onTouchMove={(e) => handleMove(e.touches[0].clientX)}
       onMouseDown={(e) => {
-        setIsDragging(true);
+        isDraggingRef.current = true;
         if (containerRef.current) {
           const rect = containerRef.current.getBoundingClientRect();
           const x = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
@@ -37,17 +37,17 @@ export default function ImageComparison({ beforeImage, afterImage }: ImageCompar
         }
       }}
       onTouchStart={(e) => {
-        setIsDragging(true);
+        isDraggingRef.current = true;
         if (containerRef.current) {
           const rect = containerRef.current.getBoundingClientRect();
           const x = Math.max(0, Math.min(e.touches[0].clientX - rect.left, rect.width));
           setPosition((x / rect.width) * 100);
         }
       }}
-      onMouseUp={() => setIsDragging(false)}
-      onTouchEnd={() => setIsDragging(false)}
-      onMouseLeave={() => setIsDragging(false)}
-      onTouchCancel={() => setIsDragging(false)}
+      onMouseUp={() => { isDraggingRef.current = false; }}
+      onTouchEnd={() => { isDraggingRef.current = false; }}
+      onMouseLeave={() => { isDraggingRef.current = false; }}
+      onTouchCancel={() => { isDraggingRef.current = false; }}
     >
       {/* After Image (Background - Revealed) */}
       <img
