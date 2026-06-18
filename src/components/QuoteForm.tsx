@@ -156,7 +156,7 @@ export default function QuoteForm() {
                       required
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
-                      placeholder="e.g. Nitin Kumar"
+                      placeholder="e.g. John Doe"
                       className="w-full bg-editorial-cream border border-editorial-border hover:border-editorial-muted focus:border-editorial-accent focus:outline-none rounded-lg px-3.5 py-2.5 text-xs text-editorial-ink placeholder-editorial-muted font-medium"
                     />
                   </div>
@@ -180,7 +180,7 @@ export default function QuoteForm() {
                       required
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      placeholder="e.g. +91 9318351774"
+                      placeholder="e.g. +91 9810349899"
                       className="w-full bg-editorial-cream border border-editorial-border hover:border-editorial-muted focus:border-editorial-accent focus:outline-none rounded-lg px-3.5 py-2.5 text-xs text-editorial-ink placeholder-editorial-muted font-medium"
                     />
                   </div>

@@ -31,14 +31,14 @@ export default function Header() {
   return (
     <header
       id="main-header"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-        ? "bg-editorial-bg/95 backdrop-blur-md shadow-sm border-b border-editorial-border py-2"
-        : "bg-transparent py-6"
+      className={`fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl z-50 transition-all duration-300 rounded-full ${scrolled
+        ? "bg-white/80 backdrop-blur-xl shadow-lg border border-white/40"
+        : "bg-white/20 backdrop-blur-md shadow-sm border border-white/20"
         }`}
     >
       {/* Main NavBar */}
-      <div className="w-full px-4 sm:px-8 lg:px-24">
-        <div className="flex justify-between items-center h-16 relative">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-12 md:h-14 relative">
 
           {/* Logo on the Left */}
           <Link
@@ -47,10 +47,10 @@ export default function Header() {
             onClick={handleNavClick}
           >
             <div className="flex items-center justify-center">
-              <img 
-                src="/ChatGPT_Image_Jun_16__2026__03_26_32_PM-removebg-preview.png" 
-                alt="KPN Enterprises" 
-                className="h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              <img
+                src="/ChatGPT_Image_Jun_16__2026__03_26_32_PM-removebg-preview.png"
+                alt="KPN Enterprises"
+                className="h-10 md:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </div>
           </Link>
@@ -64,13 +64,12 @@ export default function Header() {
                   key={item.name}
                   to={item.path}
                   onClick={handleNavClick}
-                  className={`text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.2em] transition-all pb-1 ${
-                    isActive
-                      ? "text-blue-500 border-b-[1.5px] border-blue-500"
-                      : scrolled 
-                      ? "text-editorial-dark-gray hover:text-editorial-ink hover:opacity-70 border-b-[1.5px] border-transparent" 
+                  className={`text-[10px] lg:text-[11px] font-bold uppercase tracking-[0.2em] transition-all pb-1 ${isActive
+                    ? "text-blue-500 border-b-[1.5px] border-blue-500"
+                    : scrolled
+                      ? "text-editorial-dark-gray hover:text-editorial-ink hover:opacity-70 border-b-[1.5px] border-transparent"
                       : "text-gray-300 hover:text-white hover:opacity-70 border-b-[1.5px] border-transparent"
-                  }`}
+                    }`}
                 >
                   {item.name}
                 </Link>
@@ -84,16 +83,16 @@ export default function Header() {
               <span className={`text-[8px] font-bold uppercase tracking-[0.3em] ${scrolled ? "text-editorial-muted" : "text-gray-400"}`}>
                 Direct Line
               </span>
-              <span className={`text-xs font-bold tracking-widest ${scrolled ? "text-editorial-ink" : "text-white"}`}>
+              <span className={`text-[10px] font-bold tracking-widest ${scrolled ? "text-editorial-ink" : "text-white"}`}>
                 +91 93183 51774
               </span>
             </div>
 
             <Link
               to="/contact"
-              className={`font-bold py-3.5 px-8 text-[10px] uppercase tracking-[0.25em] transition-all active:scale-95 shadow-sm whitespace-nowrap ${scrolled
-                  ? "bg-editorial-ink hover:bg-editorial-accent text-white"
-                  : "bg-white hover:bg-gray-100 text-black"
+              className={`font-bold py-2 px-6 text-[10px] rounded-full uppercase tracking-[0.25em] transition-all active:scale-95 shadow-sm whitespace-nowrap ${scrolled
+                ? "bg-editorial-ink hover:bg-editorial-accent text-white"
+                : "bg-white hover:bg-gray-100 text-black"
                 }`}
             >
               Request Quote
@@ -125,10 +124,9 @@ export default function Header() {
                 key={item.name}
                 to={item.path}
                 onClick={handleNavClick}
-                className={`block w-full text-left px-4 py-3 rounded-lg text-xs font-bold uppercase tracking-wider transition-all ${
-                  isActive
-                    ? "bg-editorial-beige text-editorial-ink border-l-4 border-editorial-accent"
-                    : "text-editorial-dark-gray hover:text-editorial-ink hover:bg-editorial-beige/50"
+                className={`block w-full text-left px-4 py-3 rounded-lg text-xs font-bold uppercase tracking-wider transition-all ${isActive
+                  ? "bg-editorial-beige text-editorial-ink border-l-4 border-editorial-accent"
+                  : "text-editorial-dark-gray hover:text-editorial-ink hover:bg-editorial-beige/50"
                   }`}
               >
                 {item.name}
@@ -141,7 +139,7 @@ export default function Header() {
               className="flex items-center justify-center gap-2 bg-editorial-ink hover:bg-editorial-accent text-white font-bold py-3 px-4 rounded-full text-xs uppercase tracking-widest transition"
             >
               <Phone className="w-4 h-4" />
-              Call +91 93183 51774
+              Call +91 98103 49899
             </a>
             <Link
               to="/contact"

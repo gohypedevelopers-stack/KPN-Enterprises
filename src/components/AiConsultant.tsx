@@ -158,7 +158,7 @@ export default function AiConsultant() {
                 Need on-site testing? Our specialists inspect concrete moisture, aggregate grading level, and cracking rates directly.
               </p>
               <div className="text-xs lg:text-sm font-bold text-editorial-ink font-mono uppercase tracking-wider pt-1">
-                Active Desk: <span className="text-editorial-accent font-extrabold">+91 9318351774</span>
+                Active Desk: <span className="text-editorial-accent font-extrabold">+91 9810349899</span>
               </div>
             </div>
           </div>

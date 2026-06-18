@@ -274,28 +274,34 @@ export const SOLUTIONS_MATRIX = [
 
 export const DYNAMIC_GALLERY = [
   {
-    title: "Heavy Assembly Bay",
+    title: "Aesthetic Pathway Marking",
     category: "Epoxy Flooring",
-    desc: "A wide forklift hallway with yellow demarcations and super high-gloss reflection.",
-    url: "/gallery/heavy_assembly_bay.png"
+    desc: "Sleek grey epoxy flooring featuring clean white curved pathways for a modern learning environment.",
+    url: "/gallery/WhatsApp Image 2026-06-17 at 7.34.30 PM.jpeg"
   },
   {
-    title: "Pharma Cleanroom Corner",
+    title: "Warehouse Safety Markings",
+    category: "Safety & Workflow",
+    desc: "High-visibility green epoxy pathways and forklift caution projections for organized, safe logistics.",
+    url: "/gallery/WhatsApp Image 2026-06-17 at 7.34.29 PM (2).jpeg"
+  },
+  {
+    title: "Engineering Workshop",
+    category: "High-Gloss Epoxy",
+    desc: "Durable, high-gloss green epoxy coating being applied for maximum wear resistance in an active workshop.",
+    url: "/gallery/WhatsApp Image 2026-06-17 at 7.34.29 PM (1).jpeg"
+  },
+  {
+    title: "Pharma Cleanroom Coving",
     category: "Coving & Epoxy",
-    desc: "Cleanroom corner showcasing self-leveling floors seamless transition to clean vertical walls.",
-    url: "/gallery/pharma_cleanroom.png"
+    desc: "Sterile teal cleanroom flooring showcasing a seamless, hygienic transition to vertical walls.",
+    url: "/gallery/WhatsApp Image 2026-06-17 at 7.34.29 PM.jpeg"
   },
   {
     title: "Electronics IC Tester Lab",
     category: "Antistatic ESD",
     desc: "Electro-static dissipative blue floor with dynamic copper earthing mesh layout.",
     url: "/gallery/antistatic_esd_lab.png"
-  },
-  {
-    title: "Automotive Press Shop",
-    category: "Heavy-Duty Mortar",
-    desc: "3mm High-build mortar under giant robotic stamping machines protecting concrete.",
-    url: "/gallery/automotive_press_shop.png"
   },
   {
     title: "Chemical Trench Lining",
@@ -352,9 +358,9 @@ export const CLIENT_LOGOS: ClientProfile[] = [
 ];
 
 export const REPRESENTATIVE_CONTACT = {
-  name: "Nitin Kumar Garg",
-  title: "Professional Contractor & Owner",
-  phones: ["+91 9318351774", "+91 9810349899"],
+  name: "KPN Enterprises",
+  title: "Professional Contractor",
+  phones: ["+91 9810349899", "+91 9318351774"],
   email: "kpnenterprises31@gmail.com",
   address: "D-6/1, Pocket D, Okhla Phase II, Okhla Industrial Estate, New Delhi - 110020, India"
 };
