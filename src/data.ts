@@ -274,46 +274,67 @@ export const SOLUTIONS_MATRIX = [
 
 export const DYNAMIC_GALLERY = [
   {
+    id: "aesthetic-pathway",
     title: "Aesthetic Pathway Marking",
     category: "Epoxy Flooring",
     desc: "Sleek grey epoxy flooring featuring clean white curved pathways for a modern learning environment.",
-    url: "/gallery/WhatsApp Image 2026-06-17 at 7.34.30 PM.jpeg"
+    url: "/gallery/aesthetic_pathway.jpeg",
+    details: "Robust floor marking system for workflow demarcation, safety lines, and zones in industrial and warehouse settings.",
+    benefits: ["High visibility markings", "Fast drying application", "Abrasion resistant surface", "Improves safety compliance", "Organizes workspace efficiently"]
   },
   {
+    id: "warehouse-safety",
     title: "Warehouse Safety Markings",
     category: "Safety & Workflow",
     desc: "High-visibility green epoxy pathways and forklift caution projections for organized, safe logistics.",
-    url: "/gallery/WhatsApp Image 2026-06-17 at 7.34.29 PM (2).jpeg"
+    url: "/gallery/warehouse_safety.jpeg",
+    details: "Robust floor marking system for workflow demarcation, safety lines, and zones in industrial and warehouse settings.",
+    benefits: ["High visibility markings", "Fast drying application", "Abrasion resistant surface", "Improves safety compliance", "Organizes workspace efficiently"]
   },
   {
+    id: "engineering-workshop",
     title: "Engineering Workshop",
     category: "High-Gloss Epoxy",
     desc: "Durable, high-gloss green epoxy coating being applied for maximum wear resistance in an active workshop.",
-    url: "/gallery/WhatsApp Image 2026-06-17 at 7.34.29 PM (1).jpeg"
+    url: "/gallery/engineering_workshop.jpeg",
+    details: "Slip-resistant flooring is made to be safe in areas that are wet, steep, and have a lot of foot or equipment movement.",
+    benefits: ["Improves workplace safety", "Durable under heavy use", "Custom texture options", "Suitable for wet areas", "Reduces risk of slipping"]
   },
   {
+    id: "pharma-cleanroom",
     title: "Pharma Cleanroom Coving",
     category: "Coving & Epoxy",
     desc: "Sterile teal cleanroom flooring showcasing a seamless, hygienic transition to vertical walls.",
-    url: "/gallery/WhatsApp Image 2026-06-17 at 7.34.29 PM.jpeg"
+    url: "/gallery/pharma_cleanroom.jpeg",
+    details: "In pharmaceutical and food-grade settings, a seamless wall-to-floor transition system guarantees cleanliness and ease of cleaning.",
+    benefits: ["Eliminates dirt accumulation", "Easy to sanitize", "Impact and moisture resistant", "Matches floor finishes", "Essential for sterile areas"]
   },
   {
+    id: "ic-tester-lab",
     title: "Electronics IC Tester Lab",
     category: "Antistatic ESD",
     desc: "Electro-static dissipative blue floor with dynamic copper earthing mesh layout.",
-    url: "/gallery/antistatic_esd_lab.png"
+    url: "/gallery/antistatic_esd_lab.png",
+    details: "Static discharge in delicate areas like labs, cleanrooms, and electronic facilities is managed via a conductive flooring system.",
+    benefits: ["Prevents electrostatic damage", "Safe for electronic equipment", "Seamless and grounded surface", "Long-term static protection", "Ideal for sensitive zones"]
   },
   {
+    id: "chemical-trench",
     title: "Chemical Trench Lining",
     category: "Anti-Corrosive Coating",
     desc: "Bright yellow anti-corrosive chemical lining inside industrial acidic channels.",
-    url: "/gallery/chemical_trench.png"
+    url: "/gallery/chemical_trench.png",
+    details: "Protective coating method for concrete and metal surfaces exposed to industrial vapours, sea air, or corrosive chemicals.",
+    benefits: ["Prevents rust and corrosion", "Extends equipment lifespan", "Strong chemical resistance", "Bonds firmly to surfaces", "Ideal for harsh environments"]
   },
   {
+    id: "bottling-zone",
     title: "Bottling Zone & Drainage",
     category: "PU Screed Flooring",
     desc: "Seamless waterproof red PU flooring resistant to continuous thermal water washdowns.",
-    url: "/gallery/red_pu_screed.png"
+    url: "/gallery/red_pu_screed.png",
+    details: "To provide a smooth, long-lasting foundation for epoxy or PU systems, levelling compound is used prior to floor treatments.",
+    benefits: ["Smooth, even surface", "Quick-setting formula", "Excellent bonding capability", "Enhances final finish", "Suitable for all coatings"]
   }
 ];
 

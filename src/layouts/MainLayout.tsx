@@ -11,7 +11,7 @@ export default function MainLayout() {
   }, [pathname]);
 
   return (
-    <div className="bg-editorial-bg font-sans text-editorial-ink min-h-screen selection:bg-editorial-accent/25 selection:text-editorial-ink flex flex-col overflow-x-hidden relative w-full">
+    <div className="bg-editorial-bg font-sans text-editorial-ink min-h-screen selection:bg-editorial-accent/25 selection:text-editorial-ink flex flex-col relative w-full">
       <Header />
       <main className="flex-1">
         <Outlet />

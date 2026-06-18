@@ -5,16 +5,10 @@ import { REPRESENTATIVE_CONTACT } from "../data";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const { pathname } = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  
+  // The navbar should always be in its solid state
+  const scrolled = true;
 
   const navItems = [
     { name: "Home", path: "/", anchor: "#hero" },

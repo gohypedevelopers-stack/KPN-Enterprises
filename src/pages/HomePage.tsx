@@ -4,7 +4,7 @@ import ProductCatalog from "../components/ProductCatalog";
 import ClientSection from "../components/ClientSection";
 import QuoteForm from "../components/QuoteForm";
 import { ABOUT_TEXT, DOMAIN_EXPERTISE, COMPOSITION_DATA, DYNAMIC_GALLERY } from "../data";
-import { Check, ArrowRight } from "lucide-react";
+import { Check, ArrowRight, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { FadeIn } from "../components/ui/FadeIn";
 
@@ -141,9 +141,10 @@ export default function HomePage() {
             {/* Gallery masonry list */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredGallery.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-2xl overflow-hidden group shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300 flex flex-col h-full"
+                <Link
+                  key={item.id || idx}
+                  to={`/project/${item.id}`}
+                  className="text-left bg-white rounded-2xl overflow-hidden group shadow-[0_4px_24px_rgba(0,0,0,0.06)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-all duration-300 flex flex-col h-full"
                 >
                   {/* Visual crop box */}
                   <div className="h-56 w-full overflow-hidden relative">
@@ -173,7 +174,7 @@ export default function HomePage() {
                       </span>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
