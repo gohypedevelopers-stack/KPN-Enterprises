@@ -18,7 +18,7 @@ export default function ProjectDetailsPage() {
       <div className="w-full px-4 sm:px-6 lg:px-12 xl:px-16">
 
         {/* Back Link */}
-        <div className="mb-12">
+        {/* <div className="mb-12">
           <Link
             to="/"
             className="inline-flex items-center gap-2 text-sm font-semibold text-editorial-dark-gray hover:text-editorial-accent transition-colors"
@@ -26,7 +26,7 @@ export default function ProjectDetailsPage() {
             <ArrowLeft className="w-4 h-4" />
             Back to Case Studies
           </Link>
-        </div>
+        </div> */}
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
 
@@ -121,7 +121,7 @@ export default function ProjectDetailsPage() {
         </div>
 
         {/* --- ADDED CONTENT START --- */}
-        
+
         {/* Divider */}
         <div className="my-24 border-t border-gray-200"></div>
 
@@ -141,9 +141,9 @@ export default function ProjectDetailsPage() {
             {DYNAMIC_GALLERY.filter(p => p.id !== project.id).slice(0, 3).map((related) => (
               <Link key={related.id} to={`/project/${related.id}`} className="group block">
                 <div className="relative rounded-xl overflow-hidden aspect-[4/3] mb-4">
-                  <img 
-                    src={related.url} 
-                    alt={related.title} 
+                  <img
+                    src={related.url}
+                    alt={related.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500"></div>
@@ -157,7 +157,7 @@ export default function ProjectDetailsPage() {
               </Link>
             ))}
           </div>
-          
+
           <Link to="/" className="sm:hidden inline-flex items-center gap-2 text-sm font-bold text-editorial-accent hover:text-editorial-ink transition-colors uppercase tracking-widest mt-8">
             View All <ArrowRight className="w-4 h-4" />
           </Link>
@@ -172,7 +172,7 @@ export default function ProjectDetailsPage() {
           <p className="text-gray-300 max-w-2xl text-lg sm:text-xl font-serif italic mb-10 relative z-10">
             Contact us today to discuss your industrial or commercial flooring requirements. Our experts are ready to provide a tailored solution.
           </p>
-          <a 
+          <a
             href="mailto:kpnenterprises31@gmail.com"
             className="inline-flex items-center justify-center px-8 py-4 bg-editorial-accent text-white font-bold text-sm tracking-widest uppercase rounded-full hover:bg-white hover:text-editorial-ink transition-all duration-300 shadow-lg hover:shadow-xl relative z-10"
           >
